@@ -1,0 +1,27 @@
+<!-- views/editar-postagem.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Postagem</title>
+</head>
+<body>
+    <h1>Editar Postagem</h1>
+
+    <!-- Formulário para editar postagem -->
+    <form action="/editar-postagem/<%= postagem.id %>" method="post">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" value="<%= postagem.titulo %>" required><br>
+
+        <label for="conteudo">Conteúdo:</label>
+        <textarea id="conteudo" name="conteudo" required><%= postagem.conteudo %></textarea><br>
+
+        <input type="submit" value="Salvar Edição">
+    </form>
+
+    <a href="/postagens">Voltar para Postagens</a>
+    <a href="/admin">Voltar para Administração</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>

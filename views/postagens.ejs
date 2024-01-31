@@ -1,0 +1,27 @@
+<!-- views/postagens.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postagens</title>
+</head>
+<body>
+    <h1>Postagens</h1>
+
+    <% postagens.forEach(postagem => { %>
+        <div>
+            <h2><%= postagem.titulo %></h2>
+            <p><%= postagem.conteudo %></p>
+            
+            <!-- Link para editar postagem -->
+            <a href="/editar-postagem/<%= postagem.id %>">Editar</a>
+            <hr>
+        </div>
+    <% }) %>
+
+    <a href="/admin">Voltar para Administração</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>
+

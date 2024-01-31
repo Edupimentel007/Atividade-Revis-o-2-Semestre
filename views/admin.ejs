@@ -1,0 +1,26 @@
+<!-- views/admin.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Administração</title>
+</head>
+<body>
+    <h1>Painel de Administração</h1>
+
+    <!-- Formulário para criar nova postagem -->
+    <form action="/criar-postagem" method="post">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required><br>
+
+        <label for="conteudo">Conteúdo:</label>
+        <textarea id="conteudo" name="conteudo" required></textarea><br>
+
+        <input type="submit" value="Criar Postagem">
+    </form>
+
+    <a href="/postagens">Ver Postagens</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>
